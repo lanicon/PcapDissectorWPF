@@ -75,6 +75,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Product.cs" />
+    <Compile Include="Transform2.cs" />
+    <Compile Include="Transform\Future.cs" />
+    <Compile Include="Transform\FutureCT.cs" />
+    <Compile Include="Transform\FuturePreClose.cs" />
+    <Compile Include="Transform\Option.cs" />
+    <Compile Include="Transform\OTC.cs" />
+    <Compile Include="Transform\OTCODD.cs" />
+    <Compile Include="Transform\OTCPreClose.cs" />
+    <Compile Include="Transform\OTCWarrant.cs" />
+    <Compile Include="Transform\OTCWarrantTag.cs" />
+    <Compile Include="Transform\Shared.cs" />
+    <Compile Include="Transform\TSE.cs" />
+    <Compile Include="Transform\TSEODD.cs" />
+    <Compile Include="Transform\TSEPreClose.cs" />
+    <Compile Include="Transform\TSEWarrant.cs" />
+    <Compile Include="Transform\TSEWarrantTag.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -83,12 +100,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="NotifyPropertyBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -120,6 +140,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonLibrary\CommonLibrary\CommonLibrary.csproj">
+      <Project>{bba457ac-b8a5-4cc2-96d7-b5390fa957f2}</Project>
+      <Name>CommonLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TaifexLibrary\TaifexLibrary\TaifexLibrary.csproj">
+      <Project>{d0fa6de8-b7cb-4ad6-b72c-42aa597d8faf}</Project>
+      <Name>TaifexLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TWSELibrary\TWSELibrary\TWSELibrary.csproj">
+      <Project>{8c163bea-67f1-4348-946d-9f4ba17ef78c}</Project>
+      <Name>TWSELibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

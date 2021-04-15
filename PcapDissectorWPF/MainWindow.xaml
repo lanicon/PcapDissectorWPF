@@ -6,7 +6,60 @@
         xmlns:local="clr-namespace:PcapDissectorWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition />
+                <RowDefinition Height="128"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition  Width="13"/>
+                <ColumnDefinition Width="110"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0" Grid.Column="0" Background="#FF0D324D"  Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <Border Grid.Row="0" Grid.Column="2" Background="#FFF4E8C1" Margin="0,0,5,0" />
+            <!--<Border Grid.Row="1" Grid.Column="0" Background="LightYellow" />-->
+            <Border Grid.Row="1" Grid.Column="2" Background="Black"/>
+
+            <!--Splitter-->
+            <GridSplitter Grid.Row="0" Grid.Column="1" Background="Transparent" Grid.RowSpan="2" HorizontalAlignment="Right"   VerticalAlignment="Stretch" Width="5"  />
+            <GridSplitter Grid.Row="0" Grid.Column="2" Background="Transparent"                  HorizontalAlignment="Stretch" VerticalAlignment="Bottom"  Height="5" />
+
+            <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <Label Content="功能表" Background="Black" Foreground="White" FontSize="20" HorizontalContentAlignment="Center"/>
+                <Button Content="Home"  FontSize="20" />
+            </StackPanel>
+
+            <!--顯示HomeLog-->
+            <DockPanel Grid.Row="0" Grid.Column="2">
+                <Grid x:Name="gridHome">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="157" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="0" Click="Button_HomeGetFolder" Margin="10">選取資料夾</Button>
+                    <Label Grid.Row="0" Grid.Column="1" Content="{Binding Path=SourceFolder, UpdateSourceTrigger=PropertyChanged}" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Margin="2" />
+                    <Button Grid.Row="0" Grid.Column="2" Click="Button_StartProcess" x:Name="btnStart" Visibility="Hidden" Width="80" HorizontalAlignment="Left" Margin="10">開始執行</Button>
+
+                    <ListBox Grid.Row="1" Grid.ColumnSpan="3" FontSize="16" Background="#FF383838" Foreground="Aqua" ItemsSource="{Binding HomeLog}"></ListBox>
+                </Grid>
+
+
+            </DockPanel>
+
+            <!--顯示SystemLog-->
+            <DockPanel Grid.Row="1" Grid.Column="2">
+                <ListBox FontSize="16" Background="Black" Foreground="Red" ItemsSource="{Binding SystemLog}">
+                </ListBox>
+            </DockPanel>
+        </Grid>
+    </DockPanel>
 </Window>
