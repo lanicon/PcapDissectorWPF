@@ -25,6 +25,7 @@ namespace PcapDissectorWPF
         {
             InitializeComponent();
 
+
             _MainViewModel = new MainViewModel();
             DataContext = _MainViewModel;
         }
