@@ -52,7 +52,7 @@ namespace PcapDissectorWPF.Transform
                         mDIncrementalRefreshBook81.WaroForDecode(directbuffer);
                         if (dic.ContainsKey(mDIncrementalRefreshBook81.PROD_ID) == false)
                         {
-                            FutureProduct futures = new FutureProduct() { Symbol = mDIncrementalRefreshBook81.PROD_ID, Product = new Futures(), DecimalLocator = 0.01m };
+                            FutureProduct futures = new FutureProduct() { Symbol = mDIncrementalRefreshBook81.PROD_ID, Product = new Futures(), decimalLocator = 0.01m };
                             dic.Add(futures.Symbol, futures);
                             List<string> list = new List<string>();
                             list.Add("PcapTime,Last,Vol,BID1,BIDSZ1,BID2,BIDSZ2,BID3,BIDSZ3,BID4,BIDSZ4,BID5,BIDSZ5,ASK1,ASKSZ1,ASK2,ASKSZ2,ASK3,ASKSZ3,ASK4,ASKSZ4,ASK5,ASKSZ5,Tick,Volume,Time,LastTime");
@@ -86,7 +86,7 @@ namespace PcapDissectorWPF.Transform
 
                         if (dic.ContainsKey(mDIncrementalRefreshTradeSummary24.PROD_ID) == false)
                         {
-                            FutureProduct futures = new FutureProduct() { Symbol = mDIncrementalRefreshTradeSummary24.PROD_ID, Product = new Futures(), DecimalLocator = 0.01m };
+                            FutureProduct futures = new FutureProduct() { Symbol = mDIncrementalRefreshTradeSummary24.PROD_ID, Product = new Futures(), decimalLocator = 0.01m };
                             dic.Add(futures.Symbol, futures);
                             List<string> list = new List<string>();
                             list.Add("PcapTime,Last,Vol,BID1,BIDSZ1,BID2,BIDSZ2,BID3,BIDSZ3,BID4,BIDSZ4,BID5,BIDSZ5,ASK1,ASKSZ1,ASK2,ASKSZ2,ASK3,ASKSZ3,ASK4,ASKSZ4,ASK5,ASKSZ5,Tick,Volume,Time,LastTime");
@@ -118,7 +118,7 @@ namespace PcapDissectorWPF.Transform
                         mDIncrementalFullRefreshBook83.WaroForDecode(directbuffer);
                         if (dic.ContainsKey(mDIncrementalFullRefreshBook83.PROD_ID) == false)
                         {
-                            FutureProduct futures = new FutureProduct() { Symbol = mDIncrementalFullRefreshBook83.PROD_ID, Product = new Futures(), DecimalLocator = 0.01m };
+                            FutureProduct futures = new FutureProduct() { Symbol = mDIncrementalFullRefreshBook83.PROD_ID, Product = new Futures(), decimalLocator = 0.01m };
                             dic.Add(futures.Symbol, futures);
                             List<string> list = new List<string>();
                             list.Add("PcapTime,Last,Vol,BID1,BIDSZ1,BID2,BIDSZ2,BID3,BIDSZ3,BID4,BIDSZ4,BID5,BIDSZ5,ASK1,ASKSZ1,ASK2,ASKSZ2,ASK3,ASKSZ3,ASK4,ASKSZ4,ASK5,ASKSZ5,Tick,Volume,Time,LastTime");
@@ -149,7 +149,7 @@ namespace PcapDissectorWPF.Transform
                         mDInstrumentDefinitionFuture10.WaroForDecode(directbuffer);
                         if (dic.ContainsKey(mDInstrumentDefinitionFuture10.PROD_ID) == false)
                         {
-                            FutureProduct futures = new FutureProduct() { Symbol = mDInstrumentDefinitionFuture10.PROD_ID, Product = new Futures(), DecimalLocator = 0.01m };
+                            FutureProduct futures = new FutureProduct() { Symbol = mDInstrumentDefinitionFuture10.PROD_ID, Product = new Futures(), decimalLocator = 0.01m };
                             dic.Add(futures.Symbol, futures);
                             List<string> list = new List<string>();
                             list.Add("PcapTime,Last,Vol,BID1,BIDSZ1,BID2,BIDSZ2,BID3,BIDSZ3,BID4,BIDSZ4,BID5,BIDSZ5,ASK1,ASKSZ1,ASK2,ASKSZ2,ASK3,ASKSZ3,ASK4,ASKSZ4,ASK5,ASKSZ5,Tick,Volume,Time,LastTime");

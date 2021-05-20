@@ -41,39 +41,40 @@ namespace PcapDissectorWPF
     }
     public class Futures : ITaifexPrice
     {
+        public string ChineseContractName { get; set; }
         public string Symbol { get; set; }
-        public double BID_1 { get; set; }
-        public double BID_2 { get; set; }
-        public double BID_3 { get; set; }
-        public double BID_4 { get; set; }
-        public double BID_5 { get; set; }
-        public double ImpliedBID { get; set; }
+        public decimal BID_1 { get; set; }
+        public decimal BID_2 { get; set; }
+        public decimal BID_3 { get; set; }
+        public decimal BID_4 { get; set; }
+        public decimal BID_5 { get; set; }
+        public decimal ImpliedBID { get; set; }
         public int BIDSiz_1 { get; set; }
         public int BIDSiz_2 { get; set; }
         public int BIDSiz_3 { get; set; }
         public int BIDSiz_4 { get; set; }
         public int BIDSiz_5 { get; set; }
         public int ImpliedBIDSiz { get; set; }
-        public double ASK_1 { get; set; }
-        public double ASK_2 { get; set; }
-        public double ASK_3 { get; set; }
-        public double ASK_4 { get; set; }
-        public double ASK_5 { get; set; }
-        public double ImpliedASK { get; set; }
+        public decimal ASK_1 { get; set; }
+        public decimal ASK_2 { get; set; }
+        public decimal ASK_3 { get; set; }
+        public decimal ASK_4 { get; set; }
+        public decimal ASK_5 { get; set; }
+        public decimal ImpliedASK { get; set; }
         public int ASKSiz_1 { get; set; }
         public int ASKSiz_2 { get; set; }
         public int ASKSiz_3 { get; set; }
         public int ASKSiz_4 { get; set; }
         public int ASKSiz_5 { get; set; }
         public int ImpliedASKSiz { get; set; }
-        public double Last { get; set; }
-        public double Open { get; set; }
+        public decimal Last { get; set; }
+        public decimal Open { get; set; }
         public int LastSiz { get; set; }
-        public double HighLimit { get; set; }
-        public double LowLimit { get; set; }
-        public double Yesterday { get; set; }
+        public decimal HighLimit { get; set; }
+        public decimal LowLimit { get; set; }
+        public decimal Yesterday { get; set; }
         public int Volume { get; set; }
-        public decimal DecimalLocator { get; set; }
+        public decimal decimalLocator { get; set; }
         public double doubleLocator { get; set; }
         public long UpdateTime { get; set; }
         public uint PROD_MSG_SEQ { get; set; }
@@ -82,6 +83,9 @@ namespace PcapDissectorWPF
         public bool IsBaseComplete { get; set; }
         public bool IsReFlashComplete { get; set; }
         public object _lock { get; set; }
+        
+        
+
         public void Update()
         {
             //throw new NotImplementedException();
